@@ -12,3 +12,7 @@ yarn bootstrap
 ```sh
 yarn api:start:dev
 ```
+
+## Conventions
+
+- This repo follow the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) convention.
