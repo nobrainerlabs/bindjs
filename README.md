@@ -12,3 +12,11 @@ yarn bootstrap
 ```sh
 yarn api:start:dev
 ```
+
+## useful scripts
+
+- `npm run release` generate a changelog and tag the repo with a new version, following the conventional commit for version number assignement. use `git push --follow-tags` after.
+
+## Conventions
+
+- This repo follow the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) convention.
