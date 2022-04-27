@@ -2,7 +2,7 @@ import { registerAs } from '@nestjs/config';
 import { validateConfig } from './config.validator';
 import { IsInt, IsNotEmpty, IsString } from 'class-validator';
 
-class DatabaseConfig {
+export class DatabaseConfig {
   @IsInt()
   port: number;
 

@@ -2,7 +2,7 @@ import { registerAs } from '@nestjs/config';
 import { IsInt } from 'class-validator';
 import { validateConfig } from './config.validator';
 
-class AppConfig {
+export class AppConfig {
   @IsInt()
   port: string;
 }
