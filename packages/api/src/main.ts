@@ -3,8 +3,7 @@ import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as pkg from '../package.json';
 import { Logger, ValidationPipe } from '@nestjs/common';
-import { appConfig } from '../configuration/app.config';
-import { ConfigType } from '@nestjs/config';
+import { AppConfig, appConfig } from './configuration/app.config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -30,7 +29,7 @@ async function bootstrap() {
     }),
   );
 
-  const config = app.get<ConfigType<typeof appConfig>>(appConfig.KEY);
+  const config = app.get<AppConfig>(appConfig.KEY);
 
   await app.listen(config.port, () => {
     Logger.log(`api listening on port ${config.port}`, 'main');
