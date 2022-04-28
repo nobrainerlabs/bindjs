@@ -1,6 +1,6 @@
 {
   "name": "bindjs-root",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
@@ -10,6 +10,7 @@
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "^13.10.3",
     "concurrently": "^7.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
     "npm-force-resolutions": "0.0.10",
@@ -44,5 +45,10 @@
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": "prettier --write ."
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
